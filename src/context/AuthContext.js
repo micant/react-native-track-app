@@ -9,6 +9,8 @@ const authReducer = (state, action) => {
             return { ...state, errorMessage: action.payload }
         case 'signin':
             return { token: action.payload, errorMessage: '' }
+        case 'singout':
+            return { token: action.payload, errorMessage: '' }
         case 'clear_error_message':
             return { ...state, errorMessage: '' }
         default:
@@ -19,7 +21,10 @@ const authReducer = (state, action) => {
 const tryLocalSignin = (dispatch) => async () => {
     const token = await AsyncStorage.getItem('token');   
     if (token) {
-        dispatch({ type: 'signin', payload: token });
+        dispatch({ 
+            type: 'signin', 
+            payload: token 
+        });
         navigate('TrackList');
     } else {
         navigate('Signup')
@@ -67,8 +72,13 @@ const signin = (dispatch) => async ({ email, password }) => {
 };
 
 
-const signout = (dispatch) => () => {
-    // somehow sign out??
+const signout = (dispatch) => async () => {
+    await AsyncStorage.removeItem('token');
+    dispatch({ 
+        type: 'signout', 
+        payload: null
+    });
+    navigate('Signin')
 };
 
 
