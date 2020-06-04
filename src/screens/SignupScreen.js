@@ -7,7 +7,7 @@ import { Context as AuthContext } from '../context/AuthContext';
 
 const SignupScreen = ({ navigation }) => {
     const { state, signup, clearErrorMessage } = useContext(AuthContext);
-    
+
     return (
         <View style={styles.container}>
             <NavigationEvents onWillFocus={clearErrorMessage} />
@@ -25,6 +25,7 @@ const SignupScreen = ({ navigation }) => {
         </View>
     )
 };
+
 
 SignupScreen.navigationOptions = () => {
     return {
