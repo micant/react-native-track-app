@@ -12,12 +12,12 @@ const SignupScreen = ({ navigation }) => {
             <AuthForm 
                 header="Sign up for Tracker"
                 errorMessage={state.errorMessage}
-                buttonText="Sign Up"
+                buttonText="Sign up"
                 onSubmit={signup}
             />
             <Link 
                 route="Signin"
-                text="Already have an account? Sign in instead" 
+                text={`Already have an account?\nSign in instead.`} 
                 navigation={navigation}
             />
         </View>

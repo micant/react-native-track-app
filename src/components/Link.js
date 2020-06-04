@@ -13,7 +13,7 @@ const Link = ({ navigation, text, route }) => {
 
 const styles = StyleSheet.create({
     link: {
-        fontSize: 16,
+        fontSize: 18,
         color: 'blue',
         marginLeft: 8,
         marginRight: 8
