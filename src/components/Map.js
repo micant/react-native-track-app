@@ -3,13 +3,7 @@ import { Text, StyleSheet } from 'react-native';
 import MapView, { Polyline }from 'react-native-maps';
 
 const Map = () => {
-    let points = [];
-    for (let i=0; i<20; i++) {
-        points.push({
-            latitude: -37.840935 + i * 0.001,
-            longitude: 144.946457 + i * 0.001
-        })
-    }
+    const points = [];
     return (
         <MapView 
             style={styles.map} 
