@@ -23,7 +23,7 @@ const Map = () => {
             <Polyline coordinates={points} />
         </MapView>
     )
-}
+};
 
 const styles = StyleSheet.create({
     map: {
