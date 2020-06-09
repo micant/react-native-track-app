@@ -25,4 +25,4 @@ export const { Context, Provider } = createDataContext(
     locationReducer,
     { startRecording, stopRecording, addLocation },
     { recording: false, locations: [], currentLocation: null }
-  );
+);
