@@ -39,10 +39,10 @@ const App = createAppContainer(switchNavigator);
 
 export default () => {
   return (
-    <LocationProvider>
-      <AuthProvider>
+    <AuthProvider>
+      <LocationProvider>
         <App ref={(navigator) => { setNavigator(navigator) }} />
-      </AuthProvider>
-    </LocationProvider>
+      </LocationProvider>
+    </AuthProvider>
   );
 };
